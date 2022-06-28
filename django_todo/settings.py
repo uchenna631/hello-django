@@ -36,7 +36,7 @@ DEBUG = development
 if development:
     ALLOWED_HOSTS = ['localhost']
 else:
-    ALLOWED_HOSTS = [os.environ.get('uc-django-todo-app.herokuapp.com')]
+    ALLOWED_HOSTS = ['uc-django-todo-app.herokuapp.com']
 
 
 # Application definition
@@ -95,7 +95,7 @@ if development:
 else:
     DATABASES = {
         'default': 
-        dj_database_url.parse(os.environ.get('postgres://iliidcgxbyzrow:85c9d93551437832ed286bfabcec4b2468dd022b9767daa0d0c6e570eaa8f00f@ec2-52-212-228-71.eu-west-1.compute.amazonaws.com:5432/dcijj04kvum39j'))
+        dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 
 
